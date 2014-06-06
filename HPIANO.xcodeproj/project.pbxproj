@@ -14,6 +14,13 @@
 		8A449F2C193F97000010C81D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A449F2A193F97000010C81D /* Main.storyboard */; };
 		8A449F2E193F97000010C81D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A449F2D193F97000010C81D /* Images.xcassets */; };
 		8A449F3A193F97000010C81D /* HPIANOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A449F39193F97000010C81D /* HPIANOTests.swift */; };
+		8A91ABD019407A6500DD6EB5 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A91ABCF19407A6500DD6EB5 /* GameController.swift */; };
+		8A91ABD219407A7600DD6EB5 /* CollissionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A91ABD119407A7600DD6EB5 /* CollissionHelper.swift */; };
+		8A91ABD619407ABB00DD6EB5 /* Hamster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A91ABD519407ABB00DD6EB5 /* Hamster.swift */; };
+		8A91ABDA19407AEF00DD6EB5 /* Sprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A91ABD919407AEF00DD6EB5 /* Sprite.swift */; };
+		8A91ABDF19407D3A00DD6EB5 /* Piano.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A91ABDE19407D3A00DD6EB5 /* Piano.swift */; };
+		8A91ABE119407D4500DD6EB5 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A91ABE019407D4500DD6EB5 /* Background.swift */; };
+		8AC40208193FAFB10003A2A6 /* Popcorn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC40207193FAFB10003A2A6 /* Popcorn.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +45,13 @@
 		8A449F33193F97000010C81D /* HPIANOTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HPIANOTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A449F38193F97000010C81D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A449F39193F97000010C81D /* HPIANOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HPIANOTests.swift; sourceTree = "<group>"; };
+		8A91ABCF19407A6500DD6EB5 /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
+		8A91ABD119407A7600DD6EB5 /* CollissionHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollissionHelper.swift; sourceTree = "<group>"; };
+		8A91ABD519407ABB00DD6EB5 /* Hamster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hamster.swift; sourceTree = "<group>"; };
+		8A91ABD919407AEF00DD6EB5 /* Sprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sprite.swift; sourceTree = "<group>"; };
+		8A91ABDE19407D3A00DD6EB5 /* Piano.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Piano.swift; sourceTree = "<group>"; };
+		8A91ABE019407D4500DD6EB5 /* Background.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		8AC40207193FAFB10003A2A6 /* Popcorn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Popcorn.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,13 +93,12 @@
 		8A449F1F193F97000010C81D /* HPIANO */ = {
 			isa = PBXGroup;
 			children = (
-				8A449F22193F97000010C81D /* AppDelegate.swift */,
-				8A449F24193F97000010C81D /* GameScene.sks */,
-				8A449F26193F97000010C81D /* GameScene.swift */,
-				8A449F28193F97000010C81D /* GameViewController.swift */,
+				8A91ABDD19407B8800DD6EB5 /* GameSetup */,
+				8A91ABDC19407B7C00DD6EB5 /* GameLogic */,
+				8A91ABDB19407B3E00DD6EB5 /* GameFigures */,
 				8A449F2A193F97000010C81D /* Main.storyboard */,
-				8A449F2D193F97000010C81D /* Images.xcassets */,
 				8A449F20193F97000010C81D /* Supporting Files */,
+				8A449F2D193F97000010C81D /* Images.xcassets */,
 			);
 			path = HPIANO;
 			sourceTree = "<group>";
@@ -93,6 +106,7 @@
 		8A449F20193F97000010C81D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8A449F22193F97000010C81D /* AppDelegate.swift */,
 				8A449F21193F97000010C81D /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -113,6 +127,37 @@
 				8A449F38193F97000010C81D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8A91ABDB19407B3E00DD6EB5 /* GameFigures */ = {
+			isa = PBXGroup;
+			children = (
+				8A91ABD919407AEF00DD6EB5 /* Sprite.swift */,
+				8AC40207193FAFB10003A2A6 /* Popcorn.swift */,
+				8A91ABD519407ABB00DD6EB5 /* Hamster.swift */,
+				8A91ABDE19407D3A00DD6EB5 /* Piano.swift */,
+				8A91ABE019407D4500DD6EB5 /* Background.swift */,
+			);
+			name = GameFigures;
+			sourceTree = "<group>";
+		};
+		8A91ABDC19407B7C00DD6EB5 /* GameLogic */ = {
+			isa = PBXGroup;
+			children = (
+				8A91ABCF19407A6500DD6EB5 /* GameController.swift */,
+				8A91ABD119407A7600DD6EB5 /* CollissionHelper.swift */,
+			);
+			name = GameLogic;
+			sourceTree = "<group>";
+		};
+		8A91ABDD19407B8800DD6EB5 /* GameSetup */ = {
+			isa = PBXGroup;
+			children = (
+				8A449F24193F97000010C81D /* GameScene.sks */,
+				8A449F26193F97000010C81D /* GameScene.swift */,
+				8A449F28193F97000010C81D /* GameViewController.swift */,
+			);
+			name = GameSetup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +209,7 @@
 				TargetAttributes = {
 					8A449F1C193F97000010C81D = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 3WURMV9M52;
 					};
 					8A449F32193F97000010C81D = {
 						CreatedOnToolsVersion = 6.0;
@@ -216,8 +262,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A449F27193F97000010C81D /* GameScene.swift in Sources */,
+				8A91ABD019407A6500DD6EB5 /* GameController.swift in Sources */,
+				8AC40208193FAFB10003A2A6 /* Popcorn.swift in Sources */,
+				8A91ABD619407ABB00DD6EB5 /* Hamster.swift in Sources */,
 				8A449F29193F97000010C81D /* GameViewController.swift in Sources */,
+				8A91ABDF19407D3A00DD6EB5 /* Piano.swift in Sources */,
+				8A91ABD219407A7600DD6EB5 /* CollissionHelper.swift in Sources */,
+				8A91ABDA19407AEF00DD6EB5 /* Sprite.swift in Sources */,
 				8A449F23193F97000010C81D /* AppDelegate.swift in Sources */,
+				8A91ABE119407D4500DD6EB5 /* Background.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,9 +386,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HPIANO/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -344,9 +402,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HPIANO/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -405,6 +468,7 @@
 				8A449F3F193F97000010C81D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8A449F40193F97000010C81D /* Build configuration list for PBXNativeTarget "HPIANOTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +477,7 @@
 				8A449F42193F97000010C81D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

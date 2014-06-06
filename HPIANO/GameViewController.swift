@@ -25,9 +25,18 @@ extension SKNode {
 }
 
 class GameViewController: UIViewController {
+    
+//    func accelerometer(accelerometer: UIAccelerometer!, didAccelerate acceleration: UIAcceleration!){
+//        println("Here")
+//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        var accelerator = UIAccelerometer()
+//        accelerator.delegate = self
+//        println(accelerator)
+        
 
         if let scene = GameScene.unarchiveFromFile("GameScene") as? GameScene {
             // Configure the view.
@@ -41,9 +50,16 @@ class GameViewController: UIViewController {
             /* Set the scale mode to scale to fit the window */
             scene.scaleMode = .AspectFill
             
+//            scene.physicsWorld.
+            
+            scene.physicsWorld.gravity = CGVectorMake(0, -5)
+            scene.physicsWorld
+            
             skView.presentScene(scene)
         }
     }
+    
+//    func didA
 
     override func shouldAutorotate() -> Bool {
         return true
